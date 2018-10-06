@@ -11,7 +11,15 @@
 		$rootScope.noteID = id;
 		$rootScope.$emit('selectNote', id);   // event name & arguments
 	}
-}]]></client_script>
+	
+	// $rootScope.$on('noteUpdated', function(event,data) {)
+	
+	$rootScope.$on('noteUpdated', function(event,data) {
+		c.server.refresh();		
+	});
+	
+	
+}  // last one]]></client_script>
         <controller_as>c</controller_as>
         <css/>
         <data_table>sp_instance</data_table>
@@ -58,14 +66,14 @@
         <sys_created_by>bharadwaj</sys_created_by>
         <sys_created_on>2018-10-05 16:26:19</sys_created_on>
         <sys_id>6f5b0658dbc12300aa11d001cf9619dd</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Notes List</sys_name>
         <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
         <sys_policy/>
         <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
         <sys_update_name>sp_widget_6f5b0658dbc12300aa11d001cf9619dd</sys_update_name>
         <sys_updated_by>bharadwaj</sys_updated_by>
-        <sys_updated_on>2018-10-05 17:33:05</sys_updated_on>
+        <sys_updated_on>2018-10-06 11:31:31</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading clearfix">
     <h3 class="panel-title pull-left">
